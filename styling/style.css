@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../images/winter.jpg');
+    background-size: cover;
+    background-position: center;
+}  
+
+.header {
+     position: relative;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 100px; 
+     background: transparent;
+     display: flex;
+     justify-content: space-between; 
+     align-items: center;
+     z-index: 100;
+} 
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
+.logo img {
+    max-height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 35px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+
+.front-content{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.front-content {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.front-content p {
+    font-size: 16px;
+}

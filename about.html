@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testje</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .button {
+        margin: 20px;
+        height: 50px;
+        width: 80px;
+      
+    }
+
+    
+
+
+</style>
+
+<body>
+
+    <button class="button" id="button1">switch light</button>
+    <script>
+        
+        let button = document.getElementById('button1')
+        let kleurwaarde = 0
+        let textwaarde = 'licht uit'
+        let licht_uit = 'black'
+        let licht_aan = 'yellow'
+        let text_uit = 'licht uit'
+        let text_aan = 'licht aan'
+
+        button.addEventListener('click', toggleLight)
+
+        function  toggleLight(event) {
+            
+            let keuzekleur = kleurwaarde === 0 ? licht_aan : licht_uit;
+            kleurwaarde = 1 - kleurwaarde;
+            console.log(kleurwaarde)
+            document.body.style.backgroundColor = keuzekleur;
+            
+            let textwaarde = kleurwaarde === 1 ? text_uit : text_aan
+            button.innerText = textwaarde
+            
+        }
+
+    </script>
+</body>
+
+</html>
