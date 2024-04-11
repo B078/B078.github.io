@@ -8,6 +8,7 @@
 }
 
 body {
+    background-color: black;
     min-height: 100vh;
     background-image: url('../images/winter.jpg');
     background-size: cover;
